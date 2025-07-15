@@ -1,0 +1,245 @@
+*{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+}
+.carousel-caption{
+    text-align: center;
+background-color: rgba(0, 0, 255, 0.3);
+}
+.down{text-align: start;}
+.side{
+z-index: 100000000;
+}
+.side ul{list-style: none;}
+.side i{font-size: 40px; cursor: pointer;}
+.bg1{
+    background-image: url(../pics/europe.jpg);
+    background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover;
+}
+.destinations .places .card{
+position: relative;
+}
+.destinations .places .card::after{
+content: "";
+position: absolute;
+width: 0%;
+height: 0%; 
+top: 0;
+left: 0;
+transition: 1s;
+}
+.destinations .places .card::before{
+content: "";
+position: absolute;
+width: 0%;
+height: 0%; 
+bottom:0;
+right: 0;
+transition:1s;
+}
+.destinations .places .card:hover::after{
+background-color: rgba(0, 0, 0, 0.3);
+position: absolute;
+width: 100%;
+height: 100%;
+top: 0;
+left: 0;
+}
+.destinations .places .card:hover::before{
+background-color: rgba(0, 0, 0, 0.2);
+position: absolute;
+width: 100%;
+height: 100%;
+bottom:0;
+right: 0;
+}
+.bg2{
+    background-image: url(../pics/bg2.jpg);
+    background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover;
+}
+.persons{
+position: relative;
+}
+.bgimg{
+position: absolute;
+z-index: 1;
+}
+.overlayimg{
+position: absolute;
+z-index: 3;
+top: 0;
+}
+.team {
+  position: relative;
+  transition: 1s ; margin: auto;
+  width: 100%; 
+  height: 100%; 
+}
+
+.team:hover {
+  
+  height: 90%;
+  width: 350px;
+  border-radius: 20px;
+}
+
+.fg {
+  position: relative;
+  border-radius: 20px;
+  
+}
+
+.fg::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: inherit;
+  background-color: rgba(0, 0, 0, 0.4);
+  transition:  1s ;
+  opacity: 1;
+}
+
+.fg:hover::after {
+  background-color: rgba(2, 41, 121, 0.4);
+ 
+}
+.card-img-overlay   {color: white;
+    z-index: 111;
+}
+.card-img-overlay:hover   {color: white;
+    z-index: 111;margin-top: 8%;transition: 1S;
+}
+
+.bcd {width: 100%;position:absolute;
+    background-color: rgb(0,0, 139,0.7);
+    position: fixed;
+    z-index:100;
+}
+.clip-diagonal-right {
+    object-fit: cover;
+    clip-path: polygon(30% 0, 100% 0,100% 100%, 40% 100%);
+    transition:  0.3s ease;
+  }
+   .clip-diagonal-left {object-fit: cover;
+    clip-path: polygon(0 0,70% 0%, 60% 100%, 0% 100%);
+  transition:  0.3s ease;
+  }
+  
+.line1{border-radius: 15px;
+    width: 80px;height: 4px;background: linear-gradient(90deg, #002654 0%, #FFFFFF 33%, #ED2939 66%);  
+}
+.pp:hover{
+  background: linear-gradient(90deg, #002654 0%, #FFFFFF 33%, #ED2939 66%);  
+}
+  .l2{
+background: linear-gradient(90deg, #008C45 0%, #F4F5F0 33%, #CD212A 66%);  }
+.pp2:hover{
+background: linear-gradient(90deg, #008C45 0%, #F4F5F0 33%, #CD212A 66%);  }
+
+.l3{
+background: linear-gradient(  
+  90deg,  
+  #012169 0%,    
+  #C8102E 40%,   
+  #FFFFFF 60%,
+  #C8102E 100%   
+);  }.pp3:hover{
+background: linear-gradient(  
+  90deg,  
+  #012169 0%,    
+  #C8102E 40%,   
+  #FFFFFF 60%,
+  #C8102E 100%   )}
+
+.l4{
+background: linear-gradient(90deg, #FFFFFF 0%, #0039A6 50%, #D52B1E 100%);}
+.pp4:hover{
+background: linear-gradient(90deg, #FFFFFF 0%, #0039A6 50%, #D52B1E 100%);}
+
+.p0{
+    width: 110px;border-radius: 5px;
+    height: 30px;
+}
+.p0:hover{
+    background-color: rgb(0, 0, 0 ,0.3);
+}
+  .pp{
+     width: 110px;border-radius: 5px;
+    height: 30px;
+  }
+  .pp:hover{
+    background-color:blue;
+  }
+  .nt{
+     box-shadow: 4px 4px 12px 10px rgba(0,0,0,0.2);
+  }
+  .nt   button{
+    border-radius: 5px;
+    width: 115px;
+    height: 30px;
+  }
+  .nt   img {
+  position: relative;
+  transition: 1s ; margin: auto;
+  width: 100%; 
+  height: 100%; 
+}
+
+.nt:hover  img {
+  margin:auto ;width: 120%;
+  height: 120%;
+  border-radius: 20px;
+}
+ .nt  .line1 {
+  position: relative;
+  transition: 1s ; 
+   
+  
+}
+.z1{
+         box-shadow: 4px 4px 12px 10px rgba(0,0,0,0.2);
+
+}
+.nt:hover  .line1 {
+ width: 20%;
+  border-radius: 20px;
+}
+.color{
+    background-color:rgb(96, 215, 233) ;
+}
+.color   hr{
+    color: azure;
+}
+ .custom-hr {
+    width: 100%;
+    height: 4px;
+    background-color: #ffffff;
+  }
+  
+  .footer-hr {
+    width: 100%;
+    height: 4px;border: #ffffff;
+    background-color: #ffffff;
+  }
+  .pj{
+    color: black;
+  }
+  .pj    p:hover{
+    color: slategray;
+  }
+  .side ul{list-style: none;}
+.side i{font-size: 40px; cursor: pointer;}
+.navbar-nav li a{
+color: white !important;
+}
+.dropdown-menu li a:hover{
+background-color: rgba(0, 0, 0, 0.2);
+}
