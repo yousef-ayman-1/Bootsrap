@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Europe</title>
+    <link rel="shortcut icon" href="pics/logo-7453782_1280-removebg-preview.png" type="image/x-icon">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-light">
+       <div class="bcd0 bg-dark ">
+        <div class="bcd">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html">
+      <img src="pics/logo-7453782_1280.jpg" alt="Travel Logo" style="width:40px;" class="rounded-pill">
+    </a>
+    <a class="navbar-brand text-light" href="index.html"><span class="text-primary">Tra</span>vel</a>
+    
+    <!-- Toggle button for mobile (will appear on md screens and below) -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar" aria-controls="mynavbar" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="mynavbar">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact us</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a style="border: solid white 1px; border-radius: 10px; padding-left: 3px;" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Trips</a>
+          <ul class="dropdown-menu bg-secondary">
+            <li><a class="dropdown-item" href="london.html">London</a></li>
+            <li><a class="dropdown-item" href="moscow.html">Moscow</a></li>
+            <li><a class="dropdown-item" href="paris.html">Paris</a></li>
+            <li><a class="dropdown-item" href="rome.html">Rome</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About</a>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-primary me-2" type="submit">Search</button>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModal">
+          Login
+        </button>
+      </form>
+    </div>
+  </div>
+</nav>
+</div>
+<!-- Login Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header bg-primary">
+        <h5 class="modal-title" id="loginModalLabel">Login to Your Account</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <form id="loginForm" action="/login" method="post">
+        <div class="modal-body">
+          <div class="mb-3">
+            <label for="loginEmail" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="loginEmail" name="email" required placeholder="Enter your email">
+          </div>
+          <div class="mb-3">
+            <label for="loginPassword" class="form-label">Password</label>
+            <input type="password" class="form-control" id="loginPassword" name="password" required placeholder="Enter your password">
+          </div>
+          <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="mySwitch" name="darkmode" value="yes" checked>
+      <label class="form-check-label" for="mySwitch">Remember me</label>
+    </div>
+          <div class="text-end">
+            <a href="#forgot-password" class="small">Forgot password?</a>
+          </div>
+        </div>
+        <div class="modal-footer d-flex justify-content-between"> 
+          <button type="submit" class="btn btn-primary">Login</button>
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+         
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<div class="container-fluid d-flex justify-content-end"> 
+<aside class="side position-fixed  top-50">
+  <ul>
+    <li class="mt-3"><i class="fa-brands fa-square-facebook text-info"></i></li>
+    <li class="mt-3"><i class="fa-brands fa-square-instagram text-info"></i></li>
+    <li class="mt-3"><i class="fa-brands fa-square-twitter text-info"></i></li>
+    <li class="mt-3"><i class="fa-brands fa-linkedin text-info"></i></li>
+    <li class="mt-3"><i class="fa-brands fa-square-whatsapp text-info"></i></li>
+  </ul>
+</aside>
+</div>
+</div>
+
+<!-- Carousel -->
+<div id="destinationsCarousel" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#destinationsCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#destinationsCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#destinationsCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <button type="button" data-bs-target="#destinationsCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="pics/london.jpg" class="d-block w-100" alt="London Bridge and city skyline">
+      <div class="carousel-caption  d-md-block">
+        <h5>London</h5>
+        <p>Explore the historic capital of England</p>
+        <a href="london.html" class="btn btn-primary">Explore London</a>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="pics/paris.jpg" class="d-block w-100" alt="Eiffel Tower in Paris">
+      <div class="carousel-caption  d-md-block">
+        <h5>Paris</h5>
+        <p>Discover the city of love and lights</p>
+        <a href="paris.html" class="btn btn-primary">Explore Paris</a>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="pics/moscow.jpg" class="d-block w-100" alt="Red Square in Moscow">
+      <div class="carousel-caption  d-md-block">
+        <h5>Moscow</h5>
+        <p>Experience Russian history and culture</p>
+        <a href="moscow.html" class="btn btn-primary">Explore Moscow</a>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="pics/roma.jpg" class="d-block w-100" alt="Colosseum in Rome">
+      <div class="carousel-caption  d-md-block">
+        <h5>Rome</h5>
+        <p>Walk through ancient history</p>
+        <a href="rome.html" class="btn btn-primary">Explore Rome</a>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#destinationsCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#destinationsCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<div class="container-fluid bg-primary text-white mb-3">
+    <h3 style="padding-top: 10px;">Welcome</h3> 
+    <p>Are you planning to vesit Europe? We offer the ultimate tour to Europe, covening london, moscow,Roma,Paris From a 2 week trip to a 1 month dream vacation, we will take care of all your need hotels 24/7 Customer Service</p> 
+    <button class="btn btn-light btn-outline-dark  mb-3">Learn More</button>
+  </div>
+</div>
+<hr>
+<div class="container-fluid bg-primary text-white rounded mt-3 d-flex justify-content-center">
+    <h1 class="m-5">Popular distination in Europe</h1> 
+  </div>
+  <div class="container-fluid mt-3">
+  <div id="accordion">
+    <div class="card">
+      <div class="card-header d-flex justify-content-between">
+     <div style="width: 90%;"> <a style="width: 100%;" class="collapsed btn down" data-bs-toggle="collapse" href="#collapseone">
+       London 
+        </a></div>  
+       <div class="mt-2"><i class="fa-solid fa-chevron-down"></i> </div> 
+      </div>
+      <div id="collapseone" class="collapse" data-bs-parent="#accordion">
+        <div class="card-body">
+          London, the capital of the United Kingdom, is a sprawling metropolis with a rich history spanning nearly two millennia. It's a global hub, exerting significant influence on world art, entertainment, fashion, commerce, finance, education, healthcare, media, science, technology, tourism, transport, and communications.
+        </div>
+      </div>
+ </div>
+   <div class="card">
+      <div class="card-header d-flex justify-content-between">
+     <div style="width: 90%;"> <a style="width: 100%;" class="collapsed btn down" data-bs-toggle="collapse" href="#collapsetwo">
+       Moscow 
+        </a></div>  
+       <div class="mt-2"><i class="fa-solid fa-chevron-down"></i> </div> 
+      </div>
+      <div id="collapsetwo" class="collapse" data-bs-parent="#accordion">
+        <div class="card-body">
+          Moscow, the capital and largest city of Russia, is a sprawling metropolis on the Moskva River in Central Russia. With a population exceeding 13 million within its city limits and over 20 million in its metropolitan area, it is the most populous city entirely in Europe and one of the world's largest cities by land area.
+        </div>
+      </div>
+ </div>
+
+   <div class="card">
+      <div class="card-header d-flex justify-content-between">
+     <div style="width: 90%;"> <a style="width: 100%;" class="collapsed btn down" data-bs-toggle="collapse" href="#collapsethree">
+       Paris 
+        </a></div>  
+       <div class="mt-2"><i class="fa-solid fa-chevron-down"></i> </div> 
+      </div>
+      <div id="collapsethree" class="collapse" data-bs-parent="#accordion">
+        <div class="card-body">
+         Paris, the capital and largest city of France, is renowned globally as a center of art, fashion, gastronomy, and culture, often dubbed the "City of Light" (La Ville Lumière) and the "City of Love."
+        </div>
+      </div>
+ </div>
+   
+ </div>
+
+ <div class="card">
+      <div class="card-header d-flex justify-content-between">
+     <div style="width: 90%;"> <a style="width: 100%;" class="collapsed btn down" data-bs-toggle="collapse" href="#collapsefour">
+       Roma 
+        </a></div>  
+       <div class="mt-2"><i class="fa-solid fa-chevron-down"></i> </div> 
+      </div>
+      <div id="collapsefour" class="collapse" data-bs-parent="#accordion">
+        <div class="card-body">
+          Rome (the city): Often called the "Eternal City," Rome is the capital of Italy and is renowned for its immense historical, artistic, and architectural significance. It was the heart of the Roman Empire and boasts iconic landmarks 
+        </div>
+      </div>
+ </div>
+  </div>
+<hr>
+
+
+<div>
+  <div class="container-fluid rounded bg-light text-secondary d-flex justify-content-center">
+    <h1>translate from arabic to english</h1> 
+  </div>
+
+  <div class="container-fluid  bg-secondary text-white p-5 ">
+    <h3 class="p-3">to write and translate <span class="text-dark">press here</span></h3>
+    <button style="font-size: 20px;" class="btn btn-info p-3 copy-button"
+      type="button" 
+      data-bs-toggle="tooltip" 
+      data-bs-placement="bottom"
+      title="Press to copy">
+      Copy Text
+    </button>
+    <textarea class="mt-3 rounded" placeholder="  translate here:" style="width: 100%;" rows="5"></textarea>
+  </div>
+</div>
+
+<div>
+  <div class="container-fluid rounded bg-light text-secondary d-flex justify-content-center">
+    <h1>translate from arabic to french</h1> 
+  </div>
+
+  <div class="container-fluid  bg-secondary text-white p-5 ">
+    <h3 class="p-3">to write and translate <span class="text-dark">press here</span></h3>
+    <button style="font-size: 20px;" class="btn btn-info p-3 copy-button"
+      type="button" 
+      data-bs-toggle="tooltip" 
+      data-bs-placement="bottom"
+      title="Press to copy">
+      Copy Text
+    </button>
+    <textarea class="mt-3 rounded" placeholder="  translate here:" style="width: 100%;" rows="5"></textarea>
+  </div>
+</div>
+
+<div>
+  <div class="container-fluid rounded bg-light text-secondary d-flex justify-content-center">
+    <h1>translate from arabic to Russian</h1> 
+  </div>
+
+  <div class="container-fluid  bg-secondary text-white p-5 ">
+    <h3 class="p-3">to write and translate <span class="text-dark">press here</span></h3>
+    <button style="font-size: 20px;" class="btn btn-info p-3 copy-button"
+      type="button" 
+      data-bs-toggle="tooltip" 
+      data-bs-placement="bottom"
+      title="Press to copy">
+      Copy Text
+    </button>
+    <textarea class="mt-3 rounded" placeholder="  translate here:" style="width: 100%;" rows="5"></textarea>
+  </div>
+</div>
+
+<div>
+  <div class="container-fluid rounded bg-light text-secondary d-flex justify-content-center">
+    <h1>translate from arabic to italian</h1> 
+  </div>
+
+  <div class="container-fluid  bg-secondary text-white p-5 ">
+    <h3 class="p-3">to write and translate <span class="text-dark">press here</span></h3>
+    <button style="font-size: 20px;" class="btn btn-info p-3 copy-button"
+      type="button" 
+      data-bs-toggle="tooltip" 
+      data-bs-placement="bottom"
+      title="Press to copy">
+      Copy Text
+    </button>
+    <textarea class="mt-3 rounded" placeholder="  translate here:" style="width: 100%;" rows="5"></textarea>
+  </div>
+</div> 
+<hr>
+<div style="height: 40vh;" class="container-fluid bg1 ">
+
+</div>
+<div class="container-fluid bg-primary text-white rounded mt-3 d-flex justify-content-center">
+    <h1 class="m-5">Popular distinations in These cities</h1> 
+  </div>
+
+<div class="container mt-3">
+    <h1 class="text-center mb-4">Popular Travel Destinations</h1>
+    <div class="row destinations g-4">
+      <!-- Big Ben -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-4 places">
+        <div class="card h-100">
+          <img class="card-img-top img-thumbnail" src="pics/big ben.jpg" alt="Big Ben">
+          <div class="card-body">
+            <h4 class="card-title">Big Ben</h4>
+            <p class="card-text">The iconic clock tower of the Palace of Westminster in London, officially called Elizabeth Tower. Its 13-ton bell has kept time since 1859 and is a symbol of British democracy.</p>
+            <a href="#" class="btn btn-primary">See Profile</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tower Bridge -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-4 places">
+        <div class="card h-100">
+          <img class="card-img-top img-thumbnail" src="pics/tower bridge.jpg" alt="Tower Bridge">
+          <div class="card-body">
+            <h4 class="card-title">Tower Bridge</h4>
+            <p class="card-text">This Victorian bascule and suspension bridge over the River Thames is one of London's most recognizable landmarks. Its twin towers and glass walkways offer stunning city views.</p>
+            <a href="#" class="btn btn-primary">See Profile</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Louvre -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-4 places">
+        <div class="card h-100">
+          <img class="card-img-top img-thumbnail" src="pics/louvre.jpg" alt="Louvre Museum">
+          <div class="card-body">
+            <h4 class="card-title">Louvre Museum</h4>
+            <p class="card-text">The world's largest art museum in Paris, housing over 38,000 objects including the Mona Lisa and Venus de Milo. Its glass pyramid entrance has become an architectural icon.</p>
+            <a href="#" class="btn btn-primary">See Profile</a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Eiffel Tower -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-4 places">
+        <div class="card h-100">
+          <img class="card-img-top img-thumbnail" src="pics/beautiful-wide-shot-eiffel-tower-paris-surrounded-by-water-with-ships-colorful-sky.jpg" alt="Eiffel Tower">
+          <div class="card-body">
+            <h4 class="card-title">Eiffel Tower</h4>
+            <p class="card-text">Paris's iron lattice tower built for the 1889 World's Fair. At 324 meters tall, it was the world's tallest man-made structure for 41 years and receives nearly 7 million visitors annually.</p>
+            <a href="#" class="btn btn-primary">See Profile</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Kremlin -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-4 places">
+        <div class="card h-100">
+          <img class="card-img-top img-thumbnail" src="pics/kremlin.jpg" alt="Moscow Kremlin">
+          <div class="card-body">
+            <h4 class="card-title">Moscow Kremlin</h4>
+            <p class="card-text">A fortified complex at the heart of Moscow, serving as the official residence of the Russian President. Its red walls contain cathedrals, palaces, and the famous Tsar Bell.</p>
+            <a href="#" class="btn btn-primary">See Profile</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- St. Basil's Cathedral -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-4 places">
+        <div class="card h-100">
+          <img class="card-img-top img-thumbnail" src="pics/st. basil's cathedra.jpg" alt="St. Basil's Cathedral">
+          <div class="card-body">
+            <h4 class="card-title">St. Basil's Cathedral</h4>
+            <p class="card-text">This 16th-century Moscow cathedral with its colorful onion domes was built by Ivan the Terrible. Its unique architecture has no parallel in Russian tradition.</p>
+            <a href="#" class="btn btn-primary">See Profile</a>
+          </div>
+        </div>
+      </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-1"></div>
+
+      <!-- Trevi Fountain -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-4 places">
+        <div class="card h-100">
+          <img class="card-img-top img-thumbnail" src="pics/trevi.jpg" alt="Trevi Fountain">
+          <div class="card-body">
+            <h4 class="card-title">Trevi Fountain</h4>
+            <p class="card-text">Rome's largest Baroque fountain, famous for its legend that throwing a coin over your shoulder ensures a return to Rome. It stands 26 meters high and 49 meters wide.</p>
+            <a href="#" class="btn btn-primary">See Profile</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-2"></div>
+      <!-- Colosseum -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-4 places">
+        <div class="card h-100">
+          <img class="card-img-top img-thumbnail" src="pics/colosseum.jpg" alt="Colosseum">
+          <div class="card-body">
+            <h4 class="card-title">Colosseum</h4>
+            <p class="card-text">The largest ancient amphitheater ever built, located in Rome. This elliptical wonder could hold 50,000-80,000 spectators for gladiatorial contests and public spectacles.</p>
+            <a href="#" class="btn btn-primary">See Profile</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div></div>
+<br>
+<div style="height: 40vh;" class="container-fluid bg2  ">
+
+</div>
+<hr>
+<div class="container-fluid bg-primary text-white rounded mt-3 d-flex justify-content-center"> 
+   <h1 class="m-5">Thanks For</h1> 
+    
+  </div>
+  <div class="pit">
+ <div class="container  mt-5">
+  <div class="row  ">
+   <div class="container mt-5">
+  <div class="row g-4"> <!-- Added gutter spacing with g-4 -->
+    
+    <!-- Card 1 -->
+    <div class="col-12 col-md-4"><div class="team">
+      <div class="card fg h-100" style="max-width:400px; border-radius: 20px;"> <!-- Added h-100 for equal height -->
+        <img class="card-img-top" src="./pics/trainer-1.jpg" alt="Card image" style="height:600px; object-fit:cover; border-radius: 20px;">
+        
+        <!-- Dark overlay for better text visibility -->
+        <div class="card-img-overlay d-flex flex-column" style="border-radius: 20px;">
+          
+          <!-- Top text -->
+          <h5 class="text-white n1 mt-2 " >
+            ALL THANKS AND APPRECIATION<br><br><p style="color: rgb(164, 171, 171);"><i class="fa-solid fa-clock"></i>october 15,2020</p>
+          </h5>
+          <!-- Bottom content -->
+          <div class="text-white mt-auto" style="text-shadow: 1px 1px 2px #000;">
+            <div class="media  ">
+  <img src="./pics/trainer-1.jpg" alt="John Doe" class="mr-3 mt-3 rounded-circle" style="width:80px;">
+  <div class="media-body">
+    <h6>Eng.MOHMED ISMAIL "Som3a :)" <small><i>Posted on February 19, 2016</i></small></h6>
+    <p>director of UI/UX</p>
+  </div>
+</div> </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <!-- Card 2 -->
+    <div class="col-12 col-md-4"><div class="team">
+      <div class="card fg h-100 " style="max-width:400px;  border-radius: 20px;">
+        <img class="card-img-top" src="./pics/trainer-2.jpg" alt="Card image" style="height:600px; object-fit:cover; border-radius: 20px;">
+        <div class="card-img-overlay d-flex flex-column" style="border-radius: 20px;">
+         <h5 class="text-white n1  mt-2  " >
+            ALL THANKS AND APPRECIATION<br><br><p style="color: rgb(164, 171, 171);"><i class="fa-solid fa-clock"></i>october 15,2020</p>
+          </h5>
+          
+          <div class="text-white mt-auto" style="text-shadow: 1px 1px 2px #000;">
+                  <div class="media  ">
+  <img src="./pics/trainer-2.jpg" alt="John Doe" class="mr-3 mt-3 rounded-circle" style="width:80px;">
+  <div class="media-body">
+    <h6>Eng." <small><i>Posted on February 19, 2016</i></small></h6>
+    <p style="font-size: 14PX;">director of UI/UX</p>
+  </div>
+</div>  </div>
+        </div>
+      </div></div>
+    </div>
+    
+    <!-- Card 3 -->
+    <div class="col-12 col-md-4"><div class="team">
+      <div class="card fg h-100 " style="max-width:400px; border-radius: 20px;">
+        <img class="card-img-top" src="pics/trainer-3.jpg" alt="Card image" style="height:600px; object-fit:cover; border-radius: 20px;">
+        <div class="card-img-overlay d-flex flex-column" style="border-radius: 20px;">
+         <h6 class="text-white n1  mt-2 " >
+            ALL THANKS AND APPRECIATION<br><br><p style="color: rgb(164, 171, 171);"><i class="fa-solid fa-clock"></i>october 15,2020</p>
+          </h6>
+            <div class="text-white mt-auto" style="text-shadow: 1px 1px 2px #000;">
+                  <div class="media  ">
+  <img src="pics/trainer-3.jpg" alt="John Doe" class="mr-3 mt-3 rounded-circle" style="width:80px;">
+  <div class="media-body">
+    <h6>Eng.MOHMED ISMAIL "Som3a :)" <small><i>Posted on February 19, 2016</i></small></h6>
+    <p style="font-size: 14PX;">director of UI/UX</p>
+  </div>
+</div>  </div>
+        </div>
+      </div>
+    </div></div>
+    </div>
+  </div></div></div></div><br><br><br>
+
+  <br><br><br>
+<!-- THANKS CARD -->
+<hr>
+<div class="container">
+  <div class="row">
+    <h2 class="text-center mb-4">Europe NEWS</h2>
+    <!-- Right Image Version -->
+    <div class="card nt overflow-hidden mb-5">
+      <div class="row g-0">
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">french Podcast </h5>
+            <p class="card-text"><i class="fa-solid fa-calendar-days"></i> Mon, May 25th 2020</p>
+            <div class="line1 my-3"></div>
+            <p class="mb-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo esse eligendi sint quas error officiis, ducimus, consequatur commodi quod, doloribus recusandae et quia architecto. Quaerat debitis voluptates unde praesentium error.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, animi rerum. Mollitia architecto eum nam vel. Vero, odio! Aliquam minima pariatur voluptatem accusantium recusandae eveniet id sunt iusto ipsum vitae.
+            </p>
+            <div class="d-flex flex-wrap gap-3">
+              <button class="p0"><i class="fa-solid fa-tag"></i> Podcast</button>
+              <button class="p0"><i class="fa-solid fa-clock"></i> 55 min.</button>
+              <button class="pp"><i class="fa-solid fa-play"></i> Play Episode</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 d-flex">
+          <img src="./pics/397830.jpg" class="img-fluid clip-diagonal-right" style="object-position: left;" alt="Podcast Cover">
+        </div>
+      </div>
+    </div>
+
+    <!-- Left Image Version -->
+    <div class="card nt overflow-hidden mb-5">
+      <div class="row g-0 flex-row-reverse">
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">Italian Podcast</h5>
+            <p class="card-text"><i class="fa-solid fa-calendar-days"></i> Mon, May 25th 2020</p>
+            <div class="line1 l2 my-3"></div>
+            <p class="mb-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo esse eligendi sint quas error officiis, ducimus, consequatur commodi quod, doloribus recusandae et quia architecto. Quaerat debitis voluptates unde praesentium error.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, animi rerum. Mollitia architecto eum nam vel. Vero, odio! Aliquam minima pariatur voluptatem accusantium recusandae eveniet id sunt iusto ipsum vitae.
+            </p>
+            <div class="d-flex flex-wrap gap-3">
+              <button class="p0"><i class="fa-solid fa-tag"></i> Podcast</button>
+              <button class="p0"><i class="fa-solid fa-clock"></i> 55 min.</button>
+              <button class="pp2"><i class="fa-solid fa-play"></i> Play Episode</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 d-flex">
+          <img src="./pics/46396.jpg" class="img-fluid clip-diagonal-left" style="object-position: right;" alt="Podcast Cover">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    
+    <!-- Right Image Version -->
+    <div class="card nt overflow-hidden mb-5">
+      <div class="row g-0">
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5  class="card-title">British Podcast</h5>
+            <p class="card-text"><i class="fa-solid fa-calendar-days"></i> Mon, May 25th 2020</p>
+            <div class="line1 l3 my-3"></div>
+            <p class="mb-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo esse eligendi sint quas error officiis, ducimus, consequatur commodi quod, doloribus recusandae et quia architecto. Quaerat debitis voluptates unde praesentium error.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, animi rerum. Mollitia architecto eum nam vel. Vero, odio! Aliquam minima pariatur voluptatem accusantium recusandae eveniet id sunt iusto ipsum vitae.
+            </p>
+            <div class="d-flex flex-wrap gap-3">
+              <button class="p0"><i class="fa-solid fa-tag"></i> Podcast</button>
+              <button class="p0"><i class="fa-solid fa-clock"></i> 55 min.</button>
+              <button class="pp3"><i class="fa-solid fa-play"></i> Play Episode</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 d-flex">
+          <img src="./pics/96007.jpg" class="img-fluid clip-diagonal-right" style="object-position: left;" alt="Podcast Cover">
+        </div>
+      </div>
+    </div>
+
+    <!-- Left Image Version -->
+    <div class="card nt overflow-hidden mb-5">
+      <div class="row g-0 flex-row-reverse">
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">Russian Poadcast</h5>
+            <p class="card-text"><i class="fa-solid fa-calendar-days"></i> Mon, May 25th 2020</p>
+            <div class="line1 l4 my-3"></div>
+            <p class="mb-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo esse eligendi sint quas error officiis, ducimus, consequatur commodi quod, doloribus recusandae et quia architecto. Quaerat debitis voluptates unde praesentium error.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, animi rerum. Mollitia architecto eum nam vel. Vero, odio! Aliquam minima pariatur voluptatem accusantium recusandae eveniet id sunt iusto ipsum vitae.
+            </p>
+            <div class="d-flex flex-wrap gap-3">
+              <button class="p0"><i class="fa-solid fa-tag"></i> Podcast</button>
+              <button class="p0"><i class="fa-solid fa-clock"></i> 55 min.</button>
+              <button class="pp4"><i class="fa-solid fa-play"></i> Play Episode</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 d-flex">
+          <img src="./pics/293921.jpg" class="img-fluid clip-diagonal-left" style="object-position: right;" alt="Podcast Cover">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container mt-3">
+  <div class="row">
+    <h2 class="text-center mb-4">JOIN US</h2>
+    
+    <!-- Card 1 -->
+    <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+  <div class="card  h-100">
+    <h3 class="text-center p-3">subscribe now</h3>
+    <div class="d-flex justify-content-center p-3"> <!-- Added wrapper div for centering -->
+      <img class="z1 " style="border-radius:15%; width: 200px; height: 200px; object-fit: cover;" src="./pics/twi.jpg" alt="Card image">
+    </div>
+    <div class="card-body text-center">
+      <h4 class="card-title">Go to link</h4>
+    </div>
+  </div>
+</div>
+    <!-- Card 2 -->
+     <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+  <div class="card h-100">
+    <h3 class="text-center p-3">FOLLOW</h3>
+    <div class="d-flex justify-content-center p-3"> <!-- Added wrapper div for centering -->
+      <img class="z1 " style="border-radius:15%; width: 200px; height: 200px; object-fit: cover;" src="./pics/wh.jpg" alt="Card image">
+    </div>
+    <div class="card-body text-center">
+      <h4 class="card-title">Go to link</h4>
+    </div>
+  </div>
+</div>
+    
+    <!-- Card 3 -->
+    <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+  <div class="card h-100">
+    <h3 class="text-center p-3">Link the page</h3>
+    <div class="d-flex justify-content-center p-3"> <!-- Added wrapper div for centering -->
+      <img class="z1 " style="border-radius:15%; width: 200px; height: 200px; object-fit: cover;" src="./pics/in.jpg" alt="Card image">
+    </div>
+    <div class="card-body text-center">
+      <h4 class="card-title">Go to link</h4>
+    </div>
+  </div>
+</div>
+    
+    <!-- Card 4 -->
+    <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+  <div class="card h-100">
+    <h3 class="text-center p-3">Watch Vedios</h3>
+    <div class="d-flex justify-content-center p-3"> <!-- Added wrapper div for centering -->
+      <img class="z1 " style="border-radius:15%; width: 200px; height: 200px; object-fit: cover;" src="./pics/ins.jpg" alt="Card image">
+    </div>
+    <div class="card-body text-center">
+      <h4 class="card-title">Go to link</h4>
+    </div>
+  </div>
+</div>
+  </div>
+</div>
+<div class="colo bg-body-secondary">
+
+<footer>
+  <div class="container-fluid foot">
+    <div class="row text-center gy-4 bg-secondary">
+
+      <div class="col-12 col-md-4">
+        <div class="line-foot"></div>
+        <img src="pics/logo-7453782_1280-removebg-preview.png" class="img-foot" alt="restaurant">
+        <span class="spn-foot">europe travel</span>
+        <div class="line-foot"></div>
+        <p class=" foot-hover">tel : 000.000.000</p>
+        <p class=" foot-hover">address : egypt</p>
+        <p class=" foot-hover">fax : 000.000.000</p>
+      </div>
+
+      <div class="col-12 col-md-4">
+        <div class="line-foot"></div>
+        <img src="pics/logo-7453782_1280-removebg-preview.png" class="img-foot" alt="restaurant">
+        <span class="spn-foot">europe travel</span>
+        <div class="line-foot"></div>
+        <p class=" foot-hover">Visit US</p>
+        <p class=" foot-hover">Take a look</p>
+        <p class=" foot-hover">you'r welcomed</p>
+      </div>
+
+      <div class="col-12 col-md-4 ">
+        <div class="line-foot"></div>
+        <img src="pics/logo-7453782_1280-removebg-preview.png" class="img-foot" alt="restaurant">
+        <span class="spn-foot">europe travel</span>
+        <div class="line-foot"></div>
+        <p class=" foot-hover">contact us</p>
+        <p class=" foot-hover">follow us</p>
+        <p class=" foot-hover">book your trip</p>
+      </div>
+      <div class="line2-foot line2-foot2 "></div>
+      <p class="text-center">COPYRIGHT &copy; 2025 yousef, europe travel , ALL RIGHTS</p>
+      <div class="line2-foot"></div>
+    </div>
+  </div>
+</footer>
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const copyButtons = document.querySelectorAll('.copy-button');
+    
+    copyButtons.forEach(button => {
+      const tooltip = new bootstrap.Tooltip(button, {
+        placement: 'bottom'
+      });
+      
+      const popover = new bootstrap.Popover(button, {
+        title: 'Success',
+        content: 'The text was copied!',
+        trigger: 'manual',
+        placement: 'bottom'
+      });
+      
+      button.addEventListener('click', function() {
+        tooltip.hide();
+        popover.show();
+        setTimeout(() => {
+          alert("Text copied");
+          setTimeout(() => popover.hide(), 300);
+        }, 100);
+      });
+      
+      document.addEventListener('click', function(e) {
+        if (e.target !== button && !button.contains(e.target)) {
+          popover.hide();
+        }
+      });
+    });
+  });
+</script>
+</body>
+</html>
