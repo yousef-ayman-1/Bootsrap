@@ -245,3 +245,6 @@ color: white !important;
 .dropdown-menu li a:hover{
 background-color: rgba(0, 0, 0, 0.2);
 }
+.carousel-item{
+border-radius: 20px;
+}
