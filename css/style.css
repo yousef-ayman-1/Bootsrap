@@ -19,6 +19,7 @@ z-index: 100000000;
 background-attachment: fixed;
 background-size: cover;
 }
+.carousel-caption{border-radius:20px}
 .destinations .places .card{
 position: relative;
 }
